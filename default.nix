@@ -86,6 +86,8 @@ let
 
           HsYAML-aeson = self.callCabal2nix "HsYAML-aeson" HsYAML-aeson-src {};
 
+          monad-dijkstra = hlib.unmarkBroken super.monad-dijkstra;
+
           floskell = self.callHackageDirect {
             pkg = "floskell";
             ver = "0.10.4";
